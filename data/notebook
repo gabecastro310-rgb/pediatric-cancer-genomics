@@ -1,1 +1,18 @@
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# fake gene expression dataset
+data = {
+    "Gene": ["TP53", "MYC", "RUNX2", "VEGFA", "MMP9"],
+    "Expression": [8.1, 12.3, 6.5, 9.4, 7.8]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+plt.bar(df["Gene"], df["Expression"])
+plt.title("Osteosarcoma Biomarker Expression")
+plt.xlabel("Gene")
+plt.ylabel("Expression Level")
+plt.show()
